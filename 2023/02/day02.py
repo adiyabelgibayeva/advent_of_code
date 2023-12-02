@@ -28,7 +28,6 @@ print(f"Answer 1: {sum_game}")
 #/* part 2 */
 cube_value = 0
 for game in games:
-    i = i + 1
     max_red = 0
     max_green = 0
     max_blue = 0
