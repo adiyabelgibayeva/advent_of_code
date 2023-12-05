@@ -9,7 +9,7 @@ numbers = [re.findall("\d", str) for str in data]
 print(f"Answer 1: {sum([int(i[0]+i[-1]) for i in numbers])}")
 
 # /* part 2 */
-dict = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+dict_digits = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
         "six": 6, "seven": 7, "eight": 8, "nine": 9}
 data_new = []
 
@@ -19,9 +19,9 @@ numbers = ["".join(i) for i in numbers]
 
 numbers_new = []
 for i in numbers:
-    for keys in dict.keys():
+    for keys in dict_digits.keys():
         if re.findall(keys, i):
-            i = i.replace(keys, str(dict[keys]))
+            i = i.replace(keys, str(dict_digits[keys]))
     numbers_new.append(i)
 
 print(f"Answer 2: {sum([int(i[0]+i[-1]) for i in numbers_new])}")
